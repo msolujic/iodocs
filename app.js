@@ -508,6 +508,17 @@ function processRequest(req, res, next) {
             options.path += apiConfig.keyParam + '=' + apiKey;
         }
 
+        // Add API Secrect Key to params, if any.
+        if (apiSecret != '' && apiSecret != 'undefined' && apiSecret != undefined) {
+            if (options.path.indexOf('?') !== -1) {
+                options.path += '&';
+            }
+            else {
+                options.path += '?';
+            }
+            options.path += apiConfig.secretParam + '=' + apiSecret;
+        }
+
         // Perform signature routine, if any.
         if (apiConfig.signature) {
             if (apiConfig.signature.type == 'signed_md5') {
