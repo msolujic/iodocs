@@ -1,4 +1,19 @@
 {
+
+
+    "newscurve": {
+        "name": "NewsCurve Public API",
+        "protocol": "https",
+        "baseURL": "api.newscurve.com",
+        "publicPath": "/v1",
+        "auth": "key",
+        "keyParam": "apiKey",
+        "secretParam": "consumerSecret",
+        "headers": {
+            "Accept": "application/json"
+        }
+    },
+
     "klout": {
         "name": "Klout API",
         "protocol": "http",

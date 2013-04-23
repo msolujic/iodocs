@@ -1,0 +1,380 @@
+{
+    "endpoints": [
+        {
+            "path": "/summary",
+            "name": "Summary",
+            "methods": [
+                {
+                    "MethodName": "Get Item Summary",
+                    "Synopsis": "Grabs all relevant summary info around some item, usually item stands for article or page.",
+                    "HTTPMethod": "GET",
+                    "URI": "/summary",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "url",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/suggestion",
+            "name": "Suggestion",
+            "methods": [
+                {
+                    "MethodName": "Get Item Suggestions",
+                    "Synopsis": "Grabs all relevant suggestions for some item, usually item stands for article or page.",
+                    "HTTPMethod": "GET",
+                    "URI": "/suggestion",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "url",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/timeline",
+            "name": "Timeline",
+            "methods": [
+                {
+                    "MethodName": "Get Timeline for whole domain.",
+                    "Synopsis": "Grabs timeline info for some domain.",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Timeline for URL",
+                    "Synopsis": "Grabs timeline info for some URL",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "url",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Timeline for tag",
+                    "Synopsis": "Grabs timeline info for particular tag (taxonomy).",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "tag",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Timeline for author",
+                    "Synopsis": "Grabs timeline info for particular author.",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "author",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Timeline for referrer",
+                    "Synopsis": "Grabs timeline info for particular referrer.",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "referrer",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Timeline for homepage",
+                    "Synopsis": "Grabs timeline info for particular homepage.",
+                    "HTTPMethod": "GET",
+                    "URI": "/timeline",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "homepage",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        },
+                        {
+                            "Name": "type",
+                            "Required": "N",
+                            "Default": "hour",
+                            "Type": "string",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                        }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "path": "/popular",
+            "name": "Popular",
+            "methods": [
+                {
+                    "MethodName": "Get Popular stuff for Domain",
+                    "Synopsis": "Grabs most popular items  whole domain.",
+                    "HTTPMethod": "GET",
+                    "URI": "/popular",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Popular stuff for tag",
+                    "Synopsis": "Grabs most popular items for some tag/taxonomy.",
+                    "HTTPMethod": "GET",
+                    "URI": "/popular",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "url",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "URL."
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Popular stuff for author",
+                    "Synopsis": "Grabs most popular items for some author.",
+                    "HTTPMethod": "GET",
+                    "URI": "/popular",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "author",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Author name"
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Popular stuff for homepage",
+                    "Synopsis": "Grabs most popular items for some homepage.",
+                    "HTTPMethod": "GET",
+                    "URI": "/popular",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "homepage",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Homepage."
+                        }
+                    ]
+                },
+                {
+                    "MethodName": "Get Popular stuff for referrer",
+                    "Synopsis": "Grabs most popular items for some referrer.",
+                    "HTTPMethod": "GET",
+                    "URI": "/popular",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "Y",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        },
+                        {
+                            "Name": "referrer",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Referrer identifier"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "/alert",
+            "name": "Alert",
+            "methods": [
+                {
+                    "MethodName": "Get Alerts",
+                    "Synopsis": "Grabs all recent alerts belonging to particular domain or all domains that belong to one client.",
+                    "HTTPMethod": "GET",
+                    "URI": "/alert",
+                    "RequiresOAuth": "N",
+                    "parameters": [
+                        {
+                            "Name": "domain",
+                            "Required": "N",
+                            "Default": "",
+                            "Type": "string",
+                            "Description": "Domain name."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
