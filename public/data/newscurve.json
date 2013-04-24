@@ -78,10 +78,15 @@
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day",
+                                "month"
+                            ]
                         }
                     ]
                 },
@@ -101,17 +106,21 @@
                         },
                         {
                             "Name": "url",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
                             "Description": "URL."
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day"
+                            ]
                         }
                     ]
                 },
@@ -131,17 +140,21 @@
                         },
                         {
                             "Name": "tag",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "URL."
+                            "Description": "Tag or taxonomy."
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day"
+                            ]
                         }
                     ]
                 },
@@ -161,17 +174,21 @@
                         },
                         {
                             "Name": "author",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "URL."
+                            "Description": "Author name."
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day"
+                            ]
                         }
                     ]
                 },
@@ -191,17 +208,21 @@
                         },
                         {
                             "Name": "referrer",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "URL."
+                            "Description": "Referrer unique identifier."
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day"
+                            ]
                         }
                     ]
                 },
@@ -221,17 +242,22 @@
                         },
                         {
                             "Name": "homepage",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "URL."
+                            "Description": "Homepage URL."
                         },
                         {
                             "Name": "type",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "hour",
-                            "Type": "string",
-                            "Description": "Timeline type, could be: {hour|day|month} defaults to hour"
+                            "Type": "enumerated",
+                            "Description": "Timeline type, could be: {hour|day} defaults to hour",
+                            "EnumeratedList":[
+                                "hour",
+                                "day",
+                                "month"
+                            ]
                         }
                     ]
                 }
@@ -239,7 +265,7 @@
             ]
         },
         {
-            "path": "/popular",
+            "path": "/popular?domain=:domain_name&[url|author|tag|homepage|referer]",
             "name": "Popular",
             "methods": [
                 {
@@ -274,10 +300,10 @@
                         },
                         {
                             "Name": "url",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "URL."
+                            "Description": "Tag or taxonomy name."
                         }
                     ]
                 },
@@ -297,7 +323,7 @@
                         },
                         {
                             "Name": "author",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
                             "Description": "Author name"
@@ -320,10 +346,10 @@
                         },
                         {
                             "Name": "homepage",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "Homepage."
+                            "Description": "Homepage url."
                         }
                     ]
                 },
@@ -343,17 +369,17 @@
                         },
                         {
                             "Name": "referrer",
-                            "Required": "N",
+                            "Required": "Y",
                             "Default": "",
                             "Type": "string",
-                            "Description": "Referrer identifier"
+                            "Description": "Referrer name."
                         }
                     ]
                 }
             ]
         },
         {
-            "path": "/alert",
+            "path": "/alert?domain=:domain_name",
             "name": "Alert",
             "methods": [
                 {
